@@ -1,18 +1,9 @@
 import sys
 
-def get_divisors(n: int):
-    return [i for i in range(1, n + 1) if n % i == 0]
+number = int(sys.argv[1])
 
-def main():
-    if len(sys.argv) < 2:
-        print("Usage: python divisors.py <positive-integer>")
-        return
-    n = int(sys.argv[1])
-    if n <= 0:
-        print("")
-        return
-    print(" ".join(map(str, get_divisors(n))))
+for i in range(1, number + 1):     # loop between 1 and number
+    if number % i == 0:            # check if remainder is 0
+        print(i, end=" ")
 
-if __name__ == "__main__":
-    main()
-
+print()
